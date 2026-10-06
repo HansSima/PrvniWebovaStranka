@@ -10,14 +10,28 @@
 <body>
 
     <p id="text1">Toto je puvodni text</p>
-    <button>Zmen barvu</button>
+    <button onclick="zmenBarvu()">Zmen barvu</button>
+    <button onclick="zmenText()">Zmen text</button>
+    <button onclick="odstranNeboZobrazText()">Odstran nebo zobraz text</button>
 
 </body>
 
 <script>
 
     function zmenBarvu() {
-        document.getElementByID("text1").style.color = "red";
+        document.getElementById("text1").style.color = "red";
+    }
+
+    function zmenText() {
+        document.getElementById("text1").textContent = "Toto je novy text";
+    }
+
+    function odstranNeboZobrazText() {
+        if (document.getElementById("text1").style.display === "none") {
+            document.getElementById("text1").style.display = "block";
+        } else {
+            document.getElementById("text1").style.display = "none";
+        }
     }
 
 
