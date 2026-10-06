@@ -42,3 +42,9 @@ body {
     transform: scale(1.1);
     background-color: #0056b3;
 }
+
+@media(max-width: 600px) {
+    .grid-item {
+        background-color: #ff0303;
+    }
+}
